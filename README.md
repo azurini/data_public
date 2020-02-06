@@ -22,6 +22,8 @@
 
 武汉市红十字会 的物资发放： 
 
+舆论词云： https://azurini.github.io/ciyun.html
+
 # 源代码
 湖北省红十字会 的收支数据： hb_bar.m
 
