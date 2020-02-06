@@ -1,3 +1,8 @@
+# 数据公布平台
+2020援助武汉：https://wuhan2020.kaiyuanshe.cn/
+
+湖北/武汉红十字会监督平台：https://weileizeng.github.io/red-cross/
+
 # data_public
 湖北/武汉红十字会监督数据：
 数据来源：  /data
