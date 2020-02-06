@@ -15,7 +15,7 @@
 湖北省红十字会 物资发放公示： HB_wz_1.xlsx
 
 # 可视化
-湖北省红十字会 的物资来源： 湖北红十字会--物资来源.jpg
+湖北省红十字会 的物资来源： https://azurini.github.io/HB_wz_laiyuan.html
 
 湖北省红十字会 的物资发放： https://azurini.github.io/HB_wz_fafang_1.html
 
