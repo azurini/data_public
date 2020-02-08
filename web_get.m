@@ -12,7 +12,7 @@ clear
 
 
 % github-2019ncovmemory  url{1} = 'https://github.com/2019ncovmemory/nCovMemory/';
-URLs = readtable('new_nCovMemory.xlsx');
+URLs = readtable('news/new_nCovMemory.xlsx');
 
 for i=1:1:392
 
@@ -28,6 +28,8 @@ end
 
 c={'钟南山','病毒','湖北','运气','医务工作者','封城','河南','社会','治愈','死亡','管理','中央','专利','浙江','疑似','求助','捐款','上海','控制','广州','咳嗽','发烧','人民日报','微博','军队','患者','肺炎','治疗','医生','护士','隔离','拐点','公布','火神山','雷神山','协和','热干面','丁香园','信息','双黄连','冠状病毒','加油','四川','医院','大理','武汉','口罩','辟谣','救','药','医疗','病人','中国','红十字','疫情','确诊'};
 
+alphb={'a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','[',']','(',')'};
+
 numc=length(c);
 
 count=zeros(1,numc);
@@ -35,12 +37,17 @@ count=zeros(1,numc);
 
 %% 数据生成
 
-for h=1:1:20
+for h=1:1:392
 
     sourcefile=webread(url{1,h}); % 获取所有数据
 
     sourcefile(isspace(sourcefile))=[]; % 去除空白字符（选用）
-    %sourcefile(is*(sourcefile)='a')=[]; % 去除空白字符（选用）
+    
+    for n=1:1:30
+        sourcefile = replace(sourcefile,alphb{n},'');
+    end
+    
+    sourcefile = regexprep(sourcefile,'<.*?>',''); % 去除尖括号（慎用）
 
     % expr='<atitle="(\w+)"href="';
 
@@ -66,7 +73,7 @@ for h=1:1:20
 
     end
     
-    fprintf('第 %d 个链接：%s ',h,url{1,h})
+    fprintf('第 %d 个链接：%s \n',h,url{1,h})
 
 end
 
